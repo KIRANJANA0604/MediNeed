@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="/fragments/login-nav::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<h4 class="mb-5 text-secondary">
+			<span th:text="${fname}"></span>
+			<span th:text="${lname}"></span>
+		</h4>
+	</section>
+</body>
+</html>

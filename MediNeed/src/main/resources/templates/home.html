@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="/fragments/index::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+	<section
+		class="banner d-flex justify-content-center align-items-center">
+		<div class="text-center">
+			<h2 class="bitalic">Medi Need</h2>
+			<p>This might be a best platform that helps users
+				to easily buy required medicines in any emergencies.</p>
+				<a th:href="@{/signup}">
+				<button class="btn btn-primary">Get Started</button>
+				</a>
+		</div>
+	</section>
+</body>
+</html>

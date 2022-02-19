@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="/fragments/login-nav::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>	
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="signup-form">
+						<form th:action="@{/do-upload}" method="post" enctype="multipart/form-data"
+							class="mt-5 border p-4 bg-light shadow">
+							<div th:if="${session.message}"
+								th:classappend="${session.message.type}"
+								class="alert text-center" role="alert">
+								<span th:text="${session.message.content}"></span>
+								<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+							</div>
+							<!-- <h4 class="mb-5 text-secondary"><span th:text="${fname}"></span><span th:text="${lname}"></span></h4>  -->
+							<div class="row">
+							</div>
+							<h4 class="mb-5 text-secondary">Upload Your File</h4>
+							<div class="row">
+								<div class="mb-3 col-md-12">
+									<input type="file" id="file" name="file" multiple>
+								</div>
+								<div class="col-md-12">
+									<input type="submit">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
