@@ -1,5 +1,7 @@
 package com.xoriant.MediNeed.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,5 +24,9 @@ public class UserService {
 
 	public String getUploadDirectory(String email) {
 		return userRepo.findByEmail(email).getUPLOAD_DIRECTORY();
+	}
+	
+	public List<Users> getUsers() {
+		return userRepo.getAllUsers();
 	}
 }
